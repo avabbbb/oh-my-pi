@@ -67,6 +67,13 @@
 - Fixed edit operations that could loop after empty insertions or fail on Unicode no-op and overlapping duplicate matches.
 - Fixed live subagent messages being delayed by agent discovery and roster discovery looping on dot-named transcripts.
 - Fixed llama.cpp discovery and routing for PrismML Bonsai 2 27B GGUF models, including support for cached models and the Qwen 3.8 thinking-level ladder.
+- Fixed Edit calls getting stuck generating repeated closing tags after an empty `SM:AFTER` insertion.
+- Fixed Edit previews and application panicking on Unicode no-op edits and overlapping duplicate matches.
+- Fixed live subagent messages getting stuck behind persisted-agent discovery, and roster discovery looping on dot-named transcripts.
+- Fixed llama.cpp discovery of PrismML Bonsai 2 27B GGUFs: built-in and custom-named providers now share catalog rules for chat-completions routing and the Qwen 3.8 thinking ladder (`low`/`medium`/`xhigh`), including cached models.
+### Added
+
+- `/move` now surfaces recently used project directories in its interactive picker.
 
 ## [18.2.6] - 2026-09-18
 
