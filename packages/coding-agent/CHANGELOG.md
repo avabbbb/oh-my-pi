@@ -5,6 +5,7 @@
 ### Added
 
 - `find` (and `omp find`) accepts an `omp://` docs scope: `omp://` searches every embedded harness doc and `omp://<file>.md` searches one, reporting hits as canonical `omp://` URLs that `read` opens directly, including with `:start-end` selectors ([#12758](https://github.com/can1357/oh-my-pi/pull/12758) by [@H4vC](https://github.com/H4vC)).
+- `/move` now surfaces recently used project directories in its interactive picker. ([#12497](https://github.com/can1357/oh-my-pi/pull/12497) by [@avabbbb](https://github.com/avabbbb))
 
 ## [18.2.8] - 2026-09-21
 
@@ -67,13 +68,6 @@
 - Fixed edit operations that could loop after empty insertions or fail on Unicode no-op and overlapping duplicate matches.
 - Fixed live subagent messages being delayed by agent discovery and roster discovery looping on dot-named transcripts.
 - Fixed llama.cpp discovery and routing for PrismML Bonsai 2 27B GGUF models, including support for cached models and the Qwen 3.8 thinking-level ladder.
-- Fixed Edit calls getting stuck generating repeated closing tags after an empty `SM:AFTER` insertion.
-- Fixed Edit previews and application panicking on Unicode no-op edits and overlapping duplicate matches.
-- Fixed live subagent messages getting stuck behind persisted-agent discovery, and roster discovery looping on dot-named transcripts.
-- Fixed llama.cpp discovery of PrismML Bonsai 2 27B GGUFs: built-in and custom-named providers now share catalog rules for chat-completions routing and the Qwen 3.8 thinking ladder (`low`/`medium`/`xhigh`), including cached models.
-### Added
-
-- `/move` now surfaces recently used project directories in its interactive picker.
 
 ## [18.2.6] - 2026-09-18
 
